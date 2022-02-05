@@ -1,6 +1,6 @@
 import './Grid.css';
 
-function Grid({data: {header = [], values = [], actions = []}}) {
+function Grid({data: {header = [], values = [], actions = [] }}) {
   return (
     <table className='gridTable'>
       <thead>
@@ -15,7 +15,7 @@ function Grid({data: {header = [], values = [], actions = []}}) {
             {header.map((colName) => <td key={colName}>{row[colName]}</td>)}
             {!!actions.length && 
               <td className='gridActions'>
-                {actions.map(({label, action}) => <button onClick={() => action(row)}>{label}</button>)}
+                {actions.map(({label, action}) => <button key={label} onClick={() => action(row)}>{label}</button>)}
               </td>
             }
           </tr>
