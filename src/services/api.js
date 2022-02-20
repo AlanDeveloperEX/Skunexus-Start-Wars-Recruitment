@@ -14,7 +14,6 @@ export default {
   getPlanetsList: async () => {
     return [
       {
-        slug: 'planets_list',
         items: await baseFetch(`api/planets/`)
       }
     ]
